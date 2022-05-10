@@ -8,10 +8,20 @@ export default function TextForm(props) {
   };
 
   const handleLoClick = () => {
-    // console.log("Uppercase was clicked " + text);
     let newText = text.toLowerCase();
     setText(newText);
   };
+
+  const handleClearClick = () => {
+    let newText = "";
+    setText(newText);
+  };
+
+//   const handleSentencesClick = () => {
+//     let regex = /[A-Z].*?(\.\s\?\s\!\s)/
+//     let newText = text.length;
+//     setText(newText);
+//   };
 
   const handleOnChange = (event) => {
     // console.log("On change");
@@ -39,6 +49,12 @@ export default function TextForm(props) {
         <button className="btn btn-primary mx-2" onClick={handleLoClick}>
           Convert to LowerCase
         </button>
+        <button className="btn btn-primary mx-2" onClick={handleClearClick}>
+          Clear
+        </button>
+        {/* <button className="btn btn-primary mx-2" onClick={handleSentencesClick}>
+          Find sentences
+        </button> */}
       </div>
 
       <div className="container my-3">
