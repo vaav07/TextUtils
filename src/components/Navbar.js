@@ -35,7 +35,11 @@ export default function Navbar(props) {
             </li>
           </ul>
 
-          <div className={`form-check form-switch mx-2 text-${props.mode==='light'?'dark':'light'} `}>
+          <div
+            className={`form-check form-switch mx-2 text-${
+              props.mode === "light" ? "dark" : "light"
+            } `}
+          >
             <input
               className="form-check-input"
               type="checkbox"
@@ -43,7 +47,10 @@ export default function Navbar(props) {
               id="flexSwitchCheckDefault"
               onClick={props.toggleMode}
             />
-            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+            <label
+              className="form-check-label"
+              htmlFor="flexSwitchCheckDefault"
+            >
               Enable Dark mode
             </label>
           </div>
@@ -54,7 +61,6 @@ export default function Navbar(props) {
               type="search"
               placeholder="Search"
               aria-label="Search"
-              
             />
             <button className="btn btn-outline-success" type="submit">
               Search
